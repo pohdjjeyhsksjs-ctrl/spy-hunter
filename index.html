@@ -1728,5 +1728,24 @@ function ScreenOnlineResult(){
 const Screens = { setup:ScreenSetup, words:ScreenWords, reveal:ScreenReveal, play:ScreenPlay, voting:ScreenVoting, spyGuess:ScreenSpyGuess, result:ScreenResult, about:ScreenAbout, onlineHome:ScreenOnlineHome, onlineLobby:ScreenOnlineLobby, onlineReveal:ScreenOnlineReveal, onlineVoting:ScreenOnlineVoting, onlineResult:ScreenOnlineResult };
 render();
 </script>
+     <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCeZYlUZItOHOf4d3lmvg63IkYVfQU9p-A",
+    authDomain: "spy-hunter-e8a08.firebaseapp.com",
+    databaseURL: "https://spy-hunter-e8a08-default-rtdb.firebaseio.com",
+    projectId: "spy-hunter-e8a08",
+    storageBucket: "spy-hunter-e8a08.firebasestorage.app",
+    messagingSenderId: "509224226571",
+    appId: "1:509224226571:web:a5df55b3d91ab1a3e41c0e"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  console.log("Firebase connected!");
+     </script>
 </body>
 </html>
